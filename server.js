@@ -8,6 +8,13 @@ app.use(bodyParse.json())
 require('dotenv').config();
 const port = process.env.PORT || 3000
 
+// log middleware
+const logRequest = (req, res, next) =>{
+    console.log(`[${newDate().toLocalString()}]  Request made to : ${req.originalUrl}`)
+    next();
+}
+app.use(logRequest)
+
 app.get("/", function(req, res){
     res.status(200).json({message:"welcome to my page"})
 })

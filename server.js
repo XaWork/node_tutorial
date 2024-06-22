@@ -4,6 +4,7 @@ const app = express()
 
 const bodyParse = require('body-parser')
 app.use(bodyParse.json())
+const Person = require('./model/Person')
 
 require('dotenv').config();
 const port = process.env.PORT || 3000

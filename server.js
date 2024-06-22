@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000
 
 // log middleware
 const logRequest = (req, res, next) =>{
-    console.log(`[${newDate().toLocalString()}]  Request made to : ${req.originalUrl}`)
+    console.log(`[${new Date().toLocaleString()}]  Request made to : ${req.originalUrl}`)
     next();
 }
 app.use(logRequest)

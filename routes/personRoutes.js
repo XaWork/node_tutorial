@@ -23,7 +23,7 @@ route.post('/', async(req, res) => {
 route.get("/", async (req, res) =>{
     try{
         var data = await Person.find()
-        res.status(200).json(data)
+        res.status(200).json({status:"success"})
     }catch(err){
         console.log("Error is ", err)
     }

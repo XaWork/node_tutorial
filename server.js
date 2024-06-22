@@ -13,6 +13,12 @@ app.get("/", function(req, res){
     res.status(200).json({message:"welcome to my page"})
 })
 
+
+app.get("/Hii", function(req, res){
+    
+    res.status(200).json({message:"welcome to my page"})
+})
+
 // import and use person routes
 const personRoute = require('./routes/personRoutes')
 app.use('/person', personRoute)

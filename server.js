@@ -8,15 +8,14 @@ app.use(bodyParse.json())
 require('dotenv').config();
 const port = process.env.PORT || 3000
 
-
 app.get("/", function(req, res){
     res.status(200).json({message:"welcome to my page"})
 })
 
 
-app.get("/Hii", function(req, res){
-    
-    res.status(200).json({message:"welcome to my page"})
+app.get("/Hii", async(req, res) =>{
+    var data = await Person.find()
+    res.status(200).json({status:"success"})
 })
 
 // import and use person routes

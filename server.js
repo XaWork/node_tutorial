@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000
 
 
 app.get("/", function(req, res){
-    res.send("welcom to my page")
+    res.status(200).json({message:"welcome to my page"})
 })
 
 // import and use person routes
